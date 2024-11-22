@@ -20,6 +20,11 @@ variable "network_type" {
   default     = "ipv4"
   description = "The network type of the cluster. Valid values: ipv4, ipv6, dual_stack."
 }
+variable "with_network_type" {
+  type        = bool
+  default     = true
+  description = "In new region like Spain , there is no network_type "
+}
 
 variable "maintenance_window" {
   type        = string
@@ -327,4 +332,9 @@ variable "serverless_cache_usage_limits" {
   type        = map(any)
   default     = {}
   description = "The usage limits for the serverless cache"
+}
+variable "redis_with_network_type" {
+  type        = bool
+  default     = true
+  description = "In new region like Spain , there is no network_type "
 }
